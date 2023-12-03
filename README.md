@@ -1,4 +1,4 @@
-En este repositorio se encuentra el diagrama uml general y fuera de esa carpeta va a encontrar un archivo zip que se llama "Modulo Bodega" hay está el código correspondiente a mi parte del proyecto en lenguaje java
+En este repositorio se encuentra el "Diagrama UML" general del proyecto y va a encontrar un archivo zip que se llama "Modulo Bodega" hay está el código correspondiente a mi parte del proyecto en lenguaje java
 
 Pasos para abrir el código
 1-Descagar el archivo zip "Modulo Bodega"
