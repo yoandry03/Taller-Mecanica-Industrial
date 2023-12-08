@@ -1,0 +1,133 @@
+@startuml yoandry
+
+class Empresa {
+  -nombreEmpresa: string
+  -direccionEmpresa: string
+  -numeroTelefonoEmpresa: string
+  +Empresa(): void
+}
+
+class Obrero {
+  -idO: string
+  -nombreO: string
+  +Obrero(): void
+  +Fundir(): void
+  +Cargar(): void
+}
+
+class AreaDeTrabajo {
+  -numeroA: string
+  -nombreA: string
+  -direccionA: string
+  +AreaDeTrabajo(): void
+}
+
+class Metalmecanica {
+  -cantidadObreros: int
+  ingenieroACargo: string
+  +Metalmecanica(): void
+}
+
+class FundicionHormigon {
+  -cantidadFundidores: int
+  ingenieroACargo: string
+  +FundicionHormigon(): void
+}
+
+class ProcesoProductivo {
+  -tipoPProductivo: string
+  -inicioPProductivo: string
+  -finPProductivo: string
+  +ProcesoProductivo(): void
+}
+
+class MateriaPrima1 {
+  +MateriaPrima1(): void
+}
+
+class MateriaPrima2 {
+  +MateriaPrima2(): void
+}
+
+class Bodega {
+  -nombreB: string
+  -cantEstibas: int
+  -cantTrabajadores: int
+  -tipoMateriaP: string
+  +Bodega(): void
+}
+
+class ProductoTerminado {
+  -cantPTerminados: int
+  +ProductosTerminados(): void
+}
+
+class Producto {
+  -nombreProducto: string
+  -precioCompra: double
+  -precioVenta: int
+  -calidadProducto: string
+  +Producto(): void
+}
+
+class ProductoEstandar {
+  -idPEstandar: string
+  +ProductoEstandar(): void
+}
+
+class ProductoPersonalizado {
+  -idPPersonalizado: string
+  +ProductoPersonalizado(): void
+}
+
+class Proveedor {
+  -idProveedor: string
+  -nombreProveedor: string
+  -numeroTelefonoProveedor: string
+  +Proveedor(): void
+}
+
+class Pedido{
+-idCliente:string
+-fechaPedido:string
+-costoEntrega:int
++Pedido():void
+}
+
+class Gerente {
+  -idGerente: string
+  -nombreGerente: string
+  -numeroTelefonoGerente: string
+  +Gerente(): void
+}
+
+
+AreaTrabajo "1...*" -* "1"Empresa:Posee
+Bodega"1...*" -* "1" Empresa:Posee
+Gerente "1" -* "1"Empresa:Tiene
+Obrero "1...8" -> "1" AreaTrabajo:Trabaja
+Metalmecanica"1...*" -^ "1...*" AreaTrabajo:Pertenece
+FundicionHormigon"1...*" -^ "1...*" AreaTrabajo:Pertenece
+ProcesoPruductivo "1...*" - "1" Metalmecanica:Tiene
+ProcesoPruductivo "1...*" - "1" FundicionHormigon:Tiene
+ProcesoPruductivo "1" - "1...*" MateriaPrima1:Utiliza
+ProcesoPruductivo "1" - "1...*"MateriaPrima2:Utiliza
+MateriaPrima1 "1...*" ^- "1...*"Bodega
+MateriaPrima2 "1...*" ^- "1...*"Bodega
+ProductoTerminado "1" ^- "1"Bodega
+Producto "1" -> "1"ProcesoProductivo:Se Obtiene
+Producto "1" - "1"ProductoTerminado:Transporta
+Pedido "1" - "1...*"Producto:Contiene
+ProductoEstandar "1" ^- "1"Producto
+ProductoPersonalizado "1" ^- "1"Producto
+ProductoEstandar "1...*" ^- "1"ProductoTerminado
+ProductoPersonalizado "1...*" ^- "1"ProductoTerminado:Envian
+Cliente "1" -* "1...*"Pedido:Realiza
+
+
+
+
+
+@enduml
+
+
