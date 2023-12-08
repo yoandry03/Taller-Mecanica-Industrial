@@ -23,3 +23,6 @@ correspondiente al modulo desarrollado ¨Modulo Bodega¨ que mostrara una interf
 
 
 7-Por ultimo presione el simbolo de play que aparece ubicado en el centro y aparecera la Interfaz Grafica correspondiente al "Modulo Bodega" donde podra almacenar y guardar datos en las bodegas de Materia Prima 1 y 2,añadir los productos terminados a la bodega con dicho nombre,incorporar los proveedores y el gerente de la empresa![Inkedplay_LI](https://github.com/yoandry03/Taller-Mecanica-Industrial/assets/126730209/e7a0f734-99b2-4a55-a6c7-3a11396af2ad)
+
+
+En la carpeta "UML Proyecto" se encuentra el codigo del diagrama UML del proyecto desarrollado
