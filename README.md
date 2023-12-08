@@ -26,5 +26,11 @@ correspondiente al modulo desarrollado ¨Modulo Bodega¨ que mostrara una interf
 
 
 En la carpeta "UML Proyecto" se encuentra el codigo del diagrama UML del proyecto desarrollado donde se observan las relaciones de herencia,correspondencia y agregacion entre las clases
+![UMLYoandry](https://github.com/yoandry03/Taller-Mecanica-Industrial/assets/126730209/5c543282-2d33-469b-b982-2081630ba401)
+y tambien aparece otro archivo llamado "UMLBodega Yoandry" que muestra las relaciones de herencia en el "Modulo Bodega"
+![UMLBodega Yoandry ](https://github.com/yoandry03/Taller-Mecanica-Industrial/assets/126730209/975bd614-13b1-476e-9fd6-59f6f2ae68b2)
+
+
+
 
 
