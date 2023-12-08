@@ -1,0 +1,47 @@
+@startuml
+
+
+
+MateriaPrima1 "1...*" -^ "1...*"Bodega:Encuentra
+MateriaPrima2 "1...*" -^ "1...*"Bodega:Encuentra
+ProductoTerminado "1" -^ "1"Bodega
+Proveedor "1...*" -> "1...*" MateriaPrima1
+Proveedor "1...*" -> "1...*" MateriaPrima2
+Gerente"1" -> "1...*" Proveedor
+
+class MateriaPrima1{
++MateriaPrima1():void
+}
+
+class MateriaPrima2{
++MateriaPrima2():void
+}
+
+class Bodega{
+-nombreB:string
+-cantEstibas:int
+-cantTrabajadores:int
+-tipoMateriaP:string
++Bodega():void
+}
+
+class ProductoTerminado{
+-cantPTerminados:int
++ProductosTerminados():void
+}
+
+class Proveedor{
+-idProveedor:string
+-nombreProveedor:string
+-numeroTelefonoProveedor:string
++Proveedor():void
+}
+
+class Gerente{
+-idGerente:string
+-nombreGerente:string
+-direccionGerente:string
++Gerente():void
+}
+
+@enduml
